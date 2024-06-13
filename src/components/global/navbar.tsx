@@ -26,24 +26,25 @@ export default function Navbar() {
                             </a>
                             {/* MENU CONTENT 1 */}
                             <div className="mt-14 lg:flex space-y-8 lg:mt-0 lg:flex-row lg:space-x-1 lg:space-y-0 hidden gap-5">
-                                {NavLinks.map((link, idx) => (
-                                    { link.title }
+                                {NavLinks.map((link: { title: string, path: string }, idx) => (
+                                    <Link key={idx} to={link.path} className="text-black text-lg">
+                                        {link.title}
                                     </Link>
                                 ))}
+                            </div>
+                            <div className="lg:flex flex-col space-y-8 lg:flex-row lg:space-x-3 lg:space-y-0 mt-8 lg:mt-0 hidden">
+                                <Link to="#">
+                                    <CTAButton className="hover:bg-fuchsia-600 hover:text-white transition-colors duration-500" />
+                                </Link>
+                            </div>
+                            {/* BURGER MENU */}
+                            <div className="absolute right-5 lg:hidden">
+                                <MobileNavbar />
+                            </div>
                         </div>
-                        <div className="lg:flex flex-col space-y-8 lg:flex-row lg:space-x-3 lg:space-y-0 mt-8 lg:mt-0 hidden">
-                            <Link to="#">
-                                <CTAButton className="hover:bg-fuchsia-600 hover:text-white transition-colors duration-500" />
-                            </Link>
-                        </div>
-                        {/* BURGER MENU */}
-                        <div className="absolute right-5 lg:hidden">
-                            <MobileNavbar />
-                        </div>
+                    </nav>
                 </div>
-            </nav>
-        </div >
-            </header >
+            </header>
         </>
     );
 }
