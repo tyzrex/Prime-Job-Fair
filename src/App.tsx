@@ -4,6 +4,8 @@ import Footer from "./components/global/footer";
 import Navbar from "./components/global/navbar";
 // import Home from "./components/pages/home";
 import CommingSoon from "./components/pages/comming-soon";
+import Home from "./components/pages/home";
+import MaxWidthWrapper from "./components/wrapper/maxwidth-wrapper";
 
 function App() {
     useEffect(() => {
@@ -17,14 +19,14 @@ function App() {
         };
     }, []);
     return (
-        <div className="w-screen overflow-hidden">
+        <>
             <Navbar />
             <Routes>
-                <Route path="/" element={<CommingSoon />} />
+                <Route path="/" element={<Home />} />
             </Routes>
 
             {/* <Footer /> */}
-        </div>
+        </>
     );
 }
 
