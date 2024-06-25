@@ -9,7 +9,8 @@ import JobFair from "@/assets/what_is_jobfair.png"
 export default function AboutSection() {
       return (
             <>
-                  <SectionWrapper>
+            <div id="aboutSection">
+            <SectionWrapper>
                         <MaxWidthWrapper>
                               <GridWrapper>
                                     <HeroImg img={JobFair} />
@@ -25,7 +26,9 @@ export default function AboutSection() {
                                                                                    </div>
                               </GridWrapper>
                         </MaxWidthWrapper>
-                  </SectionWrapper>
+                  </SectionWrapper>     
+            </div>
+                
             </>
       )
 }
