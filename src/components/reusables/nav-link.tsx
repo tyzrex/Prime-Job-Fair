@@ -3,13 +3,15 @@ export function NavLink({ id, title }: { id: string, title: string }) {
             <>
                   <a
                         onClick={(event: React.SyntheticEvent) => {
-                              const target = event.target as HTMLAnchorElement
+                              event.preventDefault()
                               const element = document.getElementById(id)
                               element?.scrollIntoView({
                                     behavior: 'smooth'
                               })
                         }}
-                        className="text-textsec text-lg cursor-pointer"
+                        className="text-textsec text-lg cursor-pointer
+                        hover:text-[#003145]
+                        "
                   >
                         {title}
                   </a>
