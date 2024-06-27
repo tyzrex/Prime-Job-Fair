@@ -1,4 +1,6 @@
-export function NavLink({ id, title }: { id: string, title: string }) {
+import { cn } from "@/lib/utils"
+
+export function NavLink({ id, title, className }: { id: string, title: string, className?: string }) {
       return (
             <>
                   <a
@@ -9,9 +11,7 @@ export function NavLink({ id, title }: { id: string, title: string }) {
                                     behavior: 'smooth'
                               })
                         }}
-                        className="text-textsec text-lg cursor-pointer
-                        hover:text-[#003145]
-                        "
+                        className={cn("text-textsec text-base md:text-lg cursor-pointer hover:text-[#003145]", className)}
                   >
                         {title}
                   </a>
