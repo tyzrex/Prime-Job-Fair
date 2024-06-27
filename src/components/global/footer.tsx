@@ -1,106 +1,63 @@
 import PrimeItClub from "@/assets/it_club_logo 1.png";
-import InstagramIcon from "@/assets/li_instagram.png";
-import FacebookIcon from "@/assets/li_facebook.png";
-import TwitterIcon from "@/assets/li_twitter.png";
-import YouTubeIcon from "@/assets/li_youtube.png";
-import LinkedInIcon from "@/assets/li_linkedin.png";
+
+import SectionWrapper from "../wrapper/section-wrapper";
+import MaxWidthWrapper from "../wrapper/maxwidth-wrapper";
+import { NavLink } from "../reusables/nav-link";
+import { socials } from "@/constants/socials";
 
 export default function Footer() {
-    return (
-        <>
-            <footer className="bg-white bg-cover bg-center text-black">
-                <div className="mx-auto w-full max-w-7xl px-5 py-16 md:px-10 md:py-24 lg:py-32">
-                    <div className="flex flex-col items-center">
-                        <a href="#" className="mb-8 inline-block max-w-full">
-                            <img src={PrimeItClub} alt="" className="inline-block max-w-52" />
-                        </a>
-                        {/* <div className="text-center font-semibold max-[991px]:ml-0 max-[991px]:mr-0 max-[991px]:py-1">
-              <a
-                href="#"
-                className="inline-block px-6 py-2 font-normal transition hover:text-[#d6a701]"
-              >
-                About
-              </a>
-              <a
-                href="#"
-                className="inline-block px-6 py-2 font-normal transition hover:text-[#d6a701]"
-              >
-                Schedule
-              </a>
-              <a
-                href="#"
-                className="inline-block px-6 py-2 font-normal transition hover:text-[#d6a701]"
-              >
-                Contact
-              </a>
-              <a
-                href="#"
-                className="inline-block px-6 py-2 font-normal transition hover:text-[#d6a701]"
-              >
-                Support
-              </a>
-              <a
-                href="#"
-                className="inline-block px-6 py-2 font-normal transition hover:text-[#d6a701]"
-              >
-                Help
-              </a>
-            </div> */}
-                        <div className="mt-8 w-48 border-b border-solid border-b-white"></div>
-                        <div className="text-center my-10">
-                            <h3 className="text-[14px] md:text-[18px] lg:text-[24px] uppercase">
-                                Follow us on
-                            </h3>
-                            <div className="flex gap-4 flex-wrap mt-2 justify-center">
-                                {socials.map((social, index) => (
-                                    <a
-                                        key={index}
-                                        href={social.link}
-                                        target="_blank"
-                                        rel="noreferrer"
-                                        className="inline-block w-9 h-9 md:w-10 md:h-10 mr-2"
-                                    >
-                                        <div className="border border-black bg-black rounded-full p-[10px]">
-                                            <img src={social.icon} alt={social.name} />
-                                        </div>
-                                    </a>
-                                ))}
-                            </div>
-                        </div>
-                        <p className="max-[479px]:text-sm">
-                            Prime IT Club © Copyright 2024. All rights reserved.
-                        </p>
+  return (
+    <>
+      <footer className="text-white bg-cover bg-center bg-[#071121]">
+        <SectionWrapper className="lg:pb-10 md:pb-8 pb-6">          <MaxWidthWrapper>
+          <div className="flex
+          flex-col
+          lg:flex-row
+          lg:justify-between ">
+            <div className="flex flex-col mitems-center">
+              <div className="space-y-3 text-center">
+                <img src={PrimeItClub} alt="" className="inline-block 
+                md:max-w-48
+                lg:max-w-52 " />
+                <h3 className="text-[14px] md:text-[18px] lg:text-[20px] uppercase   font-normal text-[#fff]">
+                  Follow us on
+                </h3>
+              </div>
+              <div className="flex gap-4 flex-wrap mt-6 justify-center">
+                {socials.map((social, index) => (
+                  <a
+                    key={index}
+                    href={social.link}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-block w-9 h-9 md:w-10 md:h-10 mr-2"
+                  >
+                    <div className="border border-gray-600 rounded-full p-[10px]">
+                      <img src={social.icon} alt={social.name} />
                     </div>
-                </div>
-            </footer>
-        </>
-    );
+                  </a>
+                ))}
+
+              </div>
+            </div>
+            <div className="mt-4 md:mt-0
+           flex space-x-4 justify-center items-center">
+              <NavLink id="aboutSection" title="About" className="
+                text-white inline-block md:px-6 md:py-2 font-normal transition hover:text-gray-500 " />
+              <NavLink id="companySection" title="Company" className=" text-white inline-block md:px-6 md:py-2  font-normal transition hover:text-gray-500" />
+              <NavLink id="highlightsSection" title="Highlights" className=" text-white inline-block md:px-6 md:py-2  font-normal transition hover:text-gray-500" />
+              <NavLink id="servicesSection" title="Services" className=" text-white inline-block md:px-6 md:py-2  font-normal transition hover:text-gray-500" />
+            </div>
+          </div>
+          <div className="
+          mt-5
+          lg:mt-10  w-100 border-b border-solid border-b-white"></div>
+          <p className="text-sm text-center mt-2 md:mt-4">Copyright © 2024 Prime IT Club | All Rights Reserved </p>
+        </MaxWidthWrapper>
+        </SectionWrapper>
+      </footer>
+    </>
+  );
 }
 
-export const socials = [
-    {
-        name: "Instagram",
-        link: "https://www.instagram.com/primeitclub/",
-        icon: InstagramIcon,
-    },
-    {
-        name: "Facebook",
-        link: "https://www.facebook.com/primeitclub",
-        icon: FacebookIcon,
-    },
-    {
-        name: "Twitter",
-        link: "https://twitter.com/_primeitclub",
-        icon: TwitterIcon,
-    },
-    {
-        name: "YouTube",
-        link: "https://www.youtube.com/@primeitclub",
-        icon: YouTubeIcon,
-    },
-    {
-        name: "LinkedIn",
-        link: "https://www.linkedin.com/company/prime-it-club/",
-        icon: LinkedInIcon,
-    },
-];
+

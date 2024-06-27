@@ -1,9 +1,9 @@
-import { NavLinks } from "@/constants/navbar";
 import CTAButton from "../reusables/cta-button";
 import JobFairLogo from "@/assets/jobfair.png";
 import MobileNavbar from "./mobile-navbar";
-import { Link } from "react-router-dom";
 import MaxWidthWrapper from "../wrapper/maxwidth-wrapper";
+import { useRef } from "react";
+import { NavLink } from "../reusables/nav-link";
 export default function Navbar() {
     return (
         <>
@@ -32,15 +32,10 @@ export default function Navbar() {
                                 </a>
                                 {/* MENU CONTENT 1 */}
                                 <div className="mt-14 lg:flex space-y-8 lg:mt-0 lg:flex-row lg:space-x-1 lg:space-y-0 hidden gap-5">
-                                    {NavLinks.map((link, idx) => (
-                                        <a
-                                            key={idx}
-                                            href={link.path}
-                                            className="text-textsec text-lg"
-                                        >
-                                            {link.title}
-                                        </a>
-                                    ))}
+                                    <NavLink id="aboutSection" title="About" />
+                                    <NavLink id="companySection" title="Company" />
+                                    <NavLink id="highlightsSection" title="Highlights" />
+                                    <NavLink id="servicesSection" title="Services" />
                                 </div>
 
                                 <div className="lg:flex flex-col space-y-8 lg:flex-row lg:space-x-3 lg:space-y-0 mt-8 lg:mt-0 hidden">
