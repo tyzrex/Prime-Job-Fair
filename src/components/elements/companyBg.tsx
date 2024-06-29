@@ -8,7 +8,7 @@ export default function CompanyBg({ children }: { children: React.ReactNode }) {
         <div
           className="
           bg-cover bg-center bg-no-repeat bg-contain relative
-          w-full h-[456px]
+          w-[312px] h-[404px]
           sm:h-[516px]
           sm:w-[400px]
           md:w-[543px] md:h-[704px]
