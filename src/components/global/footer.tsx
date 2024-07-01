@@ -41,18 +41,20 @@ export default function Footer() {
               </div>
             </div>
             <div className="mt-4 md:mt-0
-           flex space-x-4 justify-center items-center">
-              <NavLink id="aboutSection" title="About" className="
+           flex space-x-4 justify-center items-center ">
+              <NavLink id="aboutSection" title="About" className="text-[14px]
                 text-white inline-block md:px-6 md:py-2 font-normal transition hover:text-gray-500 " />
-              <NavLink id="companySection" title="Company" className=" text-white inline-block md:px-6 md:py-2  font-normal transition hover:text-gray-500" />
-              <NavLink id="highlightsSection" title="Highlights" className=" text-white inline-block md:px-6 md:py-2  font-normal transition hover:text-gray-500" />
-              <NavLink id="servicesSection" title="Services" className=" text-white inline-block md:px-6 md:py-2  font-normal transition hover:text-gray-500" />
+              <NavLink id="companySection" title="Company" className="text-[14px] text-white inline-block md:px-6 md:py-2  font-normal transition hover:text-gray-500" />
+              <NavLink id="highlightsSection" title="Highlights" className="text-[14px] text-white inline-block md:px-6 md:py-2  font-normal transition hover:text-gray-500" />
+              <NavLink id="servicesSection" title="Services" className="text-[14px] text-white inline-block md:px-6 md:py-2  font-normal transition hover:text-gray-500" />
             </div>
           </div>
           <div className="
           mt-5
           lg:mt-10  w-100 border-b border-solid border-b-white"></div>
-          <p className="text-sm text-center mt-2 md:mt-4">Copyright © 2024 Prime IT Club | All Rights Reserved </p>
+          <p className="
+          text-[14px]
+          md:text-sm text-center mt-2 md:mt-4">Copyright © 2024 Prime IT Club | All Rights Reserved </p>
         </MaxWidthWrapper>
         </SectionWrapper>
       </footer>
