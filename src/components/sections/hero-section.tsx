@@ -4,13 +4,11 @@ import HeroCard from "../elements/hero-card";
 import HeroImg from "../elements/hero-img";
 import GridWrapper from "../wrapper/grid-wrapper";
 import JobFair from "@/assets/hero_jobfair.png"
-import { useRef } from "react";
 
 export default function HeroSection() {
-      const homeRef = useRef<HTMLDivElement>(null);
 
       return (
-            <div ref={homeRef}>
+            <div id="homeSection">
             <SectionWrapper className="" >
                   <MaxWidthWrapper>
                         <GridWrapper>

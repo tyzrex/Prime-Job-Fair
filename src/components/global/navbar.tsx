@@ -2,7 +2,6 @@ import CTAButton from "../reusables/cta-button";
 import JobFairLogo from "@/assets/jobfair.png";
 import MobileNavbar from "./mobile-navbar";
 import MaxWidthWrapper from "../wrapper/maxwidth-wrapper";
-import { useRef } from "react";
 import { NavLink } from "../reusables/nav-link";
 export default function Navbar() {
     return (
