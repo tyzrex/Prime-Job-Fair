@@ -54,7 +54,7 @@ export default function Footer() {
           lg:mt-10  w-100 border-b border-solid border-b-white"></div>
           <p className="
           text-[14px]
-          md:text-sm text-center mt-2 md:mt-4">Copyright © 2024 Prime IT Club | All Rights Reserved </p>
+          md:text-sm text-center mt-2 md:mt-4">Copyright © {new Date().getFullYear()} Prime IT Club | All Rights Reserved </p>
         </MaxWidthWrapper>
         </SectionWrapper>
       </footer>
